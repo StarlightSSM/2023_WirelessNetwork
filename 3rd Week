@@ -17,3 +17,9 @@ DB, GUI를 미들웨어에 설치 그리고 DB에서 GUI를 가져옴
 PIR 센서 -> 0과 1의 출력값만 출력
 Serial로 하다가 바로 python으로 실해하면 오류남
 
+------------------------------------------------------
+influx(influx1) 설치
+데이터베이스 생성 명령어
+> create database 'pir'
+
+> sudo pip3 install influxdb
