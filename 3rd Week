@@ -23,3 +23,6 @@ influx(influx1) 설치
 > create database 'pir'
 
 > sudo pip3 install influxdb
+
+파이썬 파일 실행 명령어 -> python [파일명]
+> python pir_influxdb.py
