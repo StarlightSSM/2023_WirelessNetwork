@@ -1,0 +1,4 @@
+#influxdb 데이터베이스 생성 명령어
+> create database [database name]
+> show databases
+
