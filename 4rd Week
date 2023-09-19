@@ -2,3 +2,22 @@
 > create database [database name]
 > show databases
 
+#Grafana 설정
+터미널 창에 명령어
+
+#Grafana 사이트에 접속이 안될 때 해결방법
+=> 라즈베리파이를 재부팅시키면 다 꺼짐
+=> influxdb, grafana를 다시 서비스 실행시켜야함
+> sudo service influxdb start
+> sudo service grafana-server start
+
+- http://10.40.45.13/24 는 모든 라즈베리파이의 고정 ip주소임.
+아니라면 설정방법:
+> sudo nano /etc/dhcpcd.conf
+다 설정했다면
+> reboot
+
+#Grafana 데이터베이스 만들기
+> db 유형을 influxdb로 선택
+> url을 http://localhost:8086으로 설정
+> user, pw를 root로 설정
