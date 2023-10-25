@@ -1,0 +1,12 @@
+Dust Density만 출력되게 코드 수정
+실습파일 형변환 필요
+
+데이터베이스 db dust
+mt, 테이블 dust
+
+influxdb1 
+
+sudo apt-get update && sudo apt-get install influxdb -y
+
+python3 미세먼지 코드를 파이선코드로 작성할때,
+while a: 부분에서 a를 숫자로 형변환해야한다.
