@@ -1,43 +1,58 @@
-#influxdb 데이터베이스 생성 명령어
-> create database [database name]
-> show databases
+# influxdb 데이터베이스 생성 명령어
+```
+create database [database name]
+show databases
+```
 
-#Grafana 설정
+# Grafana 설정
 터미널 창에 명령어
 
-#Grafana 사이트에 접속이 안될 때 해결방법
+# Grafana 사이트에 접속이 안될 때 해결방법
 => 라즈베리파이를 재부팅시키면 다 꺼짐
 => influxdb, grafana를 다시 서비스 실행시켜야함
 > sudo service influxdb start
 > sudo service grafana-server start
 
-=> Grafana 모니터링에 아무 변화가 없다면
-> python pir_influxdb.py
+# Grafana 모니터링에 아무 변화가 없다면
+```
+python pir_influxdb.py
+```
 명령어 실행해서 데이터베이스에 데이터 넣기해야함.
 
 - http://10.40.45.13/24 는 모든 라즈베리파이의 고정 ip주소임.
-아니라면 설정방법:
-> sudo nano /etc/dhcpcd.conf
-다 설정했다면
-> reboot
+## 아니라면 설정방법:
+```
+sudo nano /etc/dhcpcd.conf
+```
+## 다 설정했다면
+```
+sudo reboot
+```
 
-#Grafana 데이터베이스 만들기
+# Grafana 데이터베이스 만들기
 > db 유형을 influxdb로 선택
 > url을 http://localhost:8086으로 설정
 > user, pw를 root로 설정
 
 
-#라즈베리파이에 카메라 설치했을 때, 설정 방법
+# 라즈베리파이에 카메라 설치했을 때, 설정 방법
 => 라즈베리파이 터미널 열어서
-> sudo raspi-config
+```
+sudo raspi-config
+```
 
 => 창이 뜨면, 방향키와 엔터를 이용하여 Interface Options에 접속
 => 다음으로는 카메라를 설정하기 위해 Legecy Camera에 접속
 => 접속하게되면 아래와 같이 카메라를 활성화 할 것인지 질문하는데, 이때, Yes를 누른뒤 Finish로 이동하여 적용하고 라즈베리파이를 재부팅한다.
-> sudo reboot
-> sudo apt-get install libcamera   // 카메라 모듈 설치
-> libcamera-jpeg -o test.jpg
+```
+sudo reboot
+sudo apt-get install libcamera   # 카메라 모듈 설치
+libcamera-jpeg -o test.jpg
+```
 
-=> 상단의 촬영 명령어가 안된다면, 둘 중의 하나의 명령어로 실행
-> raspistill -o 파일병.jpg
-> libcamera-still -o 파일명.jpg
+## 상단의 촬영 명령어가 안된다면, 둘 중의 하나의 명령어로 실행
+```
+raspistill -o 파일병.jpg
+libcamera-still -o 파일명.jpg
+```
+
