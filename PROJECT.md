@@ -1,11 +1,11 @@
 # 코드를 실행하기 위해 필요한 라이브러리를 설치
-'''
+```
 pip install opencv-python
 pip install imutils
 pip install tflite-runtime
-'''
+```
 
-'''
+```
 import cv2
 import imutils
 from imutils.video import VideoStream
@@ -66,7 +66,7 @@ while time.time() - start_time < exercise_duration:
 vs.stop()
 cv2.destroyAllWindows()
 
-'''
+```
 
 코드에서 "your_model.tflite"에는 Teachable Machine에서 내보낸 모델 파일의 경로를 넣어야 함. 
 또한 감지된 운동자세에 대한 후속 처리 로직은 모델의 출력 데이터를 기반으로 정의되어야 함.
